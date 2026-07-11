@@ -1,143 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Mohosina Akhter</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+<header class="navbar">
 
-    <nav>
+    <div class="logo">
+        Mohosina Akhter
+    </div>
 
-        <div class="logo">
-            Mohosina Akhter
-        </div>
+    <nav id="nav-links">
 
-        <ul>
+        <a href="#about">About</a>
 
-            <li><a href="#about">About</a></li>
+        <a href="#projects">Projects</a>
 
-            <li><a href="#projects">Projects</a></li>
+        <a href="#publications">Publications</a>
 
-            <li><a href="#publications">Publications</a></li>
+        <a href="#contact">Contact</a>
 
-            <li><a href="#cv">CV</a></li>
+        <a href="CV.pdf" target="_blank">CV</a>
 
-        </ul>
+        <button id="theme-toggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
 
     </nav>
 
+    <button class="menu-btn" id="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-    <div class="container">
+</header>
 
-        <!-- Sidebar -->
+<div class="wrapper">
 
-        <aside>
+    <!-- LEFT SIDEBAR -->
 
-            <img src="profile.png" class="profile">
+    <aside class="sidebar">
 
-            <h2>Mohosina Akhter</h2>
+        <img src="profile.png" class="profile-image">
 
-            <p>Machine Learning Student & Researcher</p>
+        <h2>Mohosina Akhter</h2>
 
-            <p><i class="fa-solid fa-location-dot"></i> Finland</p>
+        <p class="subtitle">
+            Machine Learning Student<br>
+            & Researcher
+        </p>
 
-            <p><i class="fa-solid fa-envelope"></i>
+        <div class="info">
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Finland
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
                 <a href="mailto:your@email.com">Email</a>
             </p>
 
-            <p><i class="fa-brands fa-google-scholar"></i>
+            <p>
+                <i class="fa-brands fa-google-scholar"></i>
                 <a href="#">Google Scholar</a>
             </p>
 
-            <p><i class="fa-brands fa-github"></i>
-                <a href="https://github.com/mohosina-lab">GitHub</a>
+            <p>
+                <i class="fa-brands fa-orcid"></i>
+                <a href="#">ORCID</a>
             </p>
 
-            <p><i class="fa-brands fa-linkedin"></i>
-                <a href="#">LinkedIn</a>
+            <p>
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/mohosina-lab">
+                    GitHub
+                </a>
             </p>
 
-        </aside>
+            <p>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="#">
+                    LinkedIn
+                </a>
+            </p>
 
+        </div>
 
-        <!-- Main Content -->
+    </aside>
 
-        <main>
+    <!-- MAIN CONTENT -->
 
-            <section id="about">
+    <main>
 
-                <h1>About Me</h1>
+        <!-- ABOUT -->
 
-                <h2>Welcome</h2>
+        <section id="about">
+
+            <h1>About Me</h1>
+
+            <h2>Welcome</h2>
+
+            <p>
+
+                I am <strong>Mohosina Akhter</strong>,
+                a Machine Learning student and researcher
+                based in Finland.
+
+            </p>
+
+            <p>
+                My research interests include:
+            </p>
+
+            <ul>
+
+                <li>Machine Learning</li>
+
+                <li>Healthcare AI</li>
+
+                <li>Predictive Modelling</li>
+
+                <li>Medical Data Science</li>
+
+                <li>Chronic Pain Research</li>
+
+            </ul>
+
+            <p>
+
+                Currently I am developing machine learning models
+                for patient selection in Spinal Cord Stimulation
+                treatment.
+
+            </p>
+
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <h1>Projects</h1>
+
+            <div class="card-grid">
+
+                <div class="card">
+
+                    <h3>Healthcare AI</h3>
+
+                    <p>
+
+                        Machine learning models for patient outcome
+                        prediction.
+
+                    </p>
+
+                    <div class="tags">
+
+                        <span>Python</span>
+
+                        <span>PyTorch</span>
+
+                        <span>XGBoost</span>
+
+                    </div>
+
+                    <div class="buttons">
+
+                        <a href="#">GitHub</a>
+
+                        <a href="#">Demo</a>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Medical Data Science</h3>
+
+                    <p>
+
+                        Predictive modelling using clinical datasets.
+
+                    </p>
+
+                    <div class="tags">
+
+                        <span>R</span>
+
+                        <span>SQL</span>
+
+                        <span>ML</span>
+
+                    </div>
+
+                    <div class="buttons">
+
+                        <a href="#">GitHub</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PUBLICATIONS -->
+
+        <section id="publications">
+
+            <h1>Publications</h1>
+
+            <div class="publication">
+
+                <h3>
+
+                    Deep Learning for Healthcare Prediction
+
+                </h3>
 
                 <p>
-                    I am <b>Mohosina Akhter</b>, a Machine Learning student and
-                    researcher based in Finland.
+
+                    Artificial Intelligence in Medicine
+
+                    • 2025
+
                 </p>
 
-                <p>My research interests include:</p>
+                <div class="buttons">
 
-                <ul>
+                    <a href="#">Paper</a>
 
-                    <li>Machine Learning</li>
+                    <a href="#">Code</a>
 
-                    <li>Healthcare AI</li>
+                    <a href="#">BibTeX</a>
 
-                    <li>Predictive Modelling</li>
+                </div>
 
-                    <li>Medical Data Science</li>
+            </div>
 
-                    <li>Chronic Pain Research</li>
+            <div class="publication">
 
-                </ul>
+                <h3>
+
+                    Predictive Models for Chronic Pain
+
+                </h3>
 
                 <p>
-                    Currently, I am developing machine learning models for
-                    patient selection in Spinal Cord Stimulation treatment.
+
+                    Journal of Medical AI
+
+                    • 2024
+
                 </p>
 
-            </section>
+                <div class="buttons">
 
-            <section id="projects">
+                    <a href="#">Paper</a>
 
-                <h1>Projects</h1>
+                    <a href="#">Code</a>
 
-                <p>Add your projects here.</p>
+                </div>
 
-            </section>
+            </div>
 
-            <section id="publications">
+        </section>
 
-                <h1>Publications</h1>
+        <!-- CONTACT -->
 
-                <p>Add your publications here.</p>
+        <section id="contact">
 
-            </section>
+            <h1>Contact</h1>
 
-            <section id="cv">
+            <p>
 
-                <h1>CV</h1>
+                📍 Finland
 
-                <p><a href="CV.pdf">Download CV</a></p>
+            </p>
 
-            </section>
+            <p>
 
-        </main>
+                📧 your@email.com
 
-    </div>
+            </p>
+
+            <p>
+
+                Feel free to contact me regarding
+                collaborations, research opportunities,
+                or academic discussions.
+
+            </p>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+
+    © 2026 Mohosina Akhter
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
