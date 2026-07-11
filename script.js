@@ -1,33 +1,45 @@
-/* ==========================================
+/* ==========================================================
+   MOHOSINA AKHTER PORTFOLIO
+   script.js
+==========================================================*/
+
+/* ==========================================================
    MOBILE MENU
-========================================== */
+==========================================================*/
 
-const menuBtn = document.getElementById("menu-btn");
-const nav = document.getElementById("nav-links");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
 
-menuBtn.addEventListener("click", () => {
-    nav.classList.toggle("active");
+hamburger.addEventListener("click", () => {
 
-    const icon = menuBtn.querySelector("i");
+    navMenu.classList.toggle("active");
 
-    if (nav.classList.contains("active")) {
+    const icon = hamburger.querySelector("i");
+
+    if(navMenu.classList.contains("active")){
+
         icon.classList.remove("fa-bars");
         icon.classList.add("fa-xmark");
-    } else {
+
+    }else{
+
         icon.classList.remove("fa-xmark");
         icon.classList.add("fa-bars");
+
     }
+
 });
 
 /* Close menu after clicking a link */
 
-document.querySelectorAll("#nav-links a").forEach(link => {
+document.querySelectorAll("#navMenu a").forEach(link=>{
 
-    link.addEventListener("click", () => {
+    link.addEventListener("click",()=>{
 
-        nav.classList.remove("active");
+        navMenu.classList.remove("active");
 
-        const icon = menuBtn.querySelector("i");
+        const icon = hamburger.querySelector("i");
+
         icon.classList.remove("fa-xmark");
         icon.classList.add("fa-bars");
 
@@ -36,58 +48,91 @@ document.querySelectorAll("#nav-links a").forEach(link => {
 });
 
 
-/* ==========================================
+/* ==========================================================
    DARK MODE
-========================================== */
+==========================================================*/
 
-const themeBtn = document.getElementById("theme-toggle");
+const themeToggle = document.getElementById("themeToggle");
+
 const body = document.body;
 
-const savedTheme = localStorage.getItem("theme");
+/* Load saved theme */
 
-if (savedTheme === "dark") {
+if(localStorage.getItem("theme") === "dark"){
 
     body.classList.add("dark");
-    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+    themeToggle.innerHTML =
+        '<i class="fa-solid fa-sun"></i>';
 
 }
 
-themeBtn.addEventListener("click", () => {
+/* Toggle */
+
+themeToggle.addEventListener("click",()=>{
 
     body.classList.toggle("dark");
 
-    if (body.classList.contains("dark")) {
+    if(body.classList.contains("dark")){
 
-        localStorage.setItem("theme", "dark");
-        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        localStorage.setItem("theme","dark");
 
-    } else {
+        themeToggle.innerHTML =
+            '<i class="fa-solid fa-sun"></i>';
 
-        localStorage.setItem("theme", "light");
-        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    }else{
+
+        localStorage.setItem("theme","light");
+
+        themeToggle.innerHTML =
+            '<i class="fa-solid fa-moon"></i>';
 
     }
 
 });
 
 
-/* ==========================================
-   ACTIVE NAVIGATION
-========================================== */
+/* ==========================================================
+   STICKY NAVBAR SHADOW
+==========================================================*/
 
-const sections = document.querySelectorAll("main section");
-const navLinks = document.querySelectorAll("#nav-links a[href^='#']");
+const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 30){
+
+        navbar.style.boxShadow =
+            "0 10px 30px rgba(0,0,0,.08)";
+
+    }else{
+
+        navbar.style.boxShadow = "none";
+
+    }
+
+});
+
+
+/* ==========================================================
+   ACTIVE MENU
+==========================================================*/
+
+const sections = document.querySelectorAll("section");
+
+const navLinks = document.querySelectorAll("#navMenu a");
+
+window.addEventListener("scroll",()=>{
 
     let current = "";
 
-    sections.forEach(section => {
+    sections.forEach(section=>{
 
         const top = section.offsetTop - 120;
+
         const height = section.offsetHeight;
 
-        if (pageYOffset >= top && pageYOffset < top + height) {
+        if(window.scrollY >= top){
 
             current = section.getAttribute("id");
 
@@ -95,11 +140,11 @@ window.addEventListener("scroll", () => {
 
     });
 
-    navLinks.forEach(link => {
+    navLinks.forEach(link=>{
 
         link.classList.remove("active-link");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if(link.getAttribute("href")==="#" + current){
 
             link.classList.add("active-link");
 
@@ -110,36 +155,23 @@ window.addEventListener("scroll", () => {
 });
 
 
-/* ==========================================
-   NAVBAR SHADOW
-========================================== */
+/* ==========================================================
+   SCROLL REVEAL
+==========================================================*/
 
-const navbar = document.querySelector(".navbar");
+const revealElements = document.querySelectorAll(
 
-window.addEventListener("scroll", () => {
+    "section, .card, .feature-card, .publication-card"
 
-    if (window.scrollY > 20) {
+);
 
-        navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
+const observer = new IntersectionObserver(
 
-    } else {
+(entries)=>{
 
-        navbar.style.boxShadow = "none";
+    entries.forEach(entry=>{
 
-    }
-
-});
-
-
-/* ==========================================
-   FADE-IN ANIMATION
-========================================== */
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
 
             entry.target.classList.add("show");
 
@@ -147,13 +179,108 @@ const observer = new IntersectionObserver((entries) => {
 
     });
 
-}, {
-    threshold: 0.15
-});
+},
+{
 
-document.querySelectorAll("section").forEach(section => {
-
-    section.classList.add("hidden");
-    observer.observe(section);
+    threshold:.15
 
 });
+
+revealElements.forEach(el=>{
+
+    el.classList.add("hidden");
+
+    observer.observe(el);
+
+});
+
+
+/* ==========================================================
+   SMOOTH SCROLL
+==========================================================*/
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const target = document.querySelector(
+
+            this.getAttribute("href")
+
+        );
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"start"
+
+            });
+
+        }
+
+    });
+
+});
+
+
+/* ==========================================================
+   IMAGE PARALLAX
+==========================================================*/
+
+const profileImage = document.querySelector(".sidebar img");
+
+window.addEventListener("scroll",()=>{
+
+    const y = window.scrollY * 0.05;
+
+    profileImage.style.transform =
+        `translateY(${y}px)`;
+
+});
+
+
+/* ==========================================================
+   CURRENT YEAR
+==========================================================*/
+
+const footer = document.querySelector("footer");
+
+const year = new Date().getFullYear();
+
+footer.innerHTML =
+`© ${year} Mohosina Akhter • Built with HTML, CSS & JavaScript`;
+
+
+/* ==========================================================
+   PRELOADER SUPPORT (OPTIONAL)
+==========================================================*/
+
+window.addEventListener("load",()=>{
+
+    document.body.classList.add("loaded");
+
+});
+
+
+/* ==========================================================
+   CONSOLE MESSAGE
+==========================================================*/
+
+console.log(
+
+"%cWelcome 👋",
+
+"font-size:20px;color:#37B7E6;font-weight:bold;"
+
+);
+
+console.log(
+
+"Portfolio by Mohosina Akhter"
+
+);
