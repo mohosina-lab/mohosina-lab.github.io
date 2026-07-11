@@ -1,330 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mohosina Akhter</title>
+    <title>Mohosina Akhter | Machine Learning Researcher</title>
+
+    <meta name="description"
+        content="Mohosina Akhter | Machine Learning Researcher | Healthcare AI | Medical Data Science">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="navbar">
+    <!-- ==========================
+            NAVBAR
+    =========================== -->
 
-    <div class="logo">
-        Mohosina Akhter
-    </div>
+    <header class="navbar">
 
-    <nav id="nav-links">
+        <a href="#" class="logo">
+            Mohosina Akhter
+        </a>
 
-        <a href="#about">About</a>
+        <nav id="navMenu">
 
-        <a href="#projects">Projects</a>
+            <a href="#about">About</a>
 
-        <a href="#publications">Publications</a>
+            <a href="#research">Research</a>
 
-        <a href="#contact">Contact</a>
+            <a href="#projects">Projects</a>
 
-        <a href="CV.pdf" target="_blank">CV</a>
+            <a href="#publications">Publications</a>
 
-        <button id="theme-toggle">
-            <i class="fa-solid fa-moon"></i>
+            <a href="#contact">Contact</a>
+
+            <a href="CV.pdf" target="_blank" class="cv-btn">
+
+                CV
+
+            </a>
+
+            <button id="themeToggle">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+        </nav>
+
+        <button class="hamburger" id="hamburger">
+
+            <i class="fa-solid fa-bars"></i>
+
         </button>
 
-    </nav>
+    </header>
 
-    <button class="menu-btn" id="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-    </button>
 
-</header>
 
-<div class="wrapper">
+    <div class="container">
 
-    <!-- LEFT SIDEBAR -->
+        <!-- ==========================
+                SIDEBAR
+        =========================== -->
 
-    <aside class="sidebar">
+        <aside class="sidebar">
 
-        <img src="profile.png" class="profile-image">
+            <img src="profile.png" alt="Mohosina Akhter">
 
-        <h2>Mohosina Akhter</h2>
+            <h2>
 
-        <p class="subtitle">
-            Machine Learning Student<br>
-            & Researcher
-        </p>
+                Mohosina Akhter
 
-        <div class="info">
+            </h2>
 
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Finland
+            <p class="designation">
+
+                Machine Learning Student
+
+                <br>
+
+                &
+
+                <br>
+
+                Researcher
+
             </p>
 
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:your@email.com">Email</a>
-            </p>
+            <div class="social">
 
-            <p>
-                <i class="fa-brands fa-google-scholar"></i>
-                <a href="#">Google Scholar</a>
-            </p>
-
-            <p>
-                <i class="fa-brands fa-orcid"></i>
-                <a href="#">ORCID</a>
-            </p>
-
-            <p>
-                <i class="fa-brands fa-github"></i>
-                <a href="https://github.com/mohosina-lab">
-                    GitHub
-                </a>
-            </p>
-
-            <p>
-                <i class="fa-brands fa-linkedin"></i>
                 <a href="#">
-                    LinkedIn
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Finland
+
                 </a>
-            </p>
 
-        </div>
+                <a href="mailto:your@email.com">
 
-    </aside>
+                    <i class="fa-solid fa-envelope"></i>
 
-    <!-- MAIN CONTENT -->
+                    Email
 
-    <main>
+                </a>
 
-        <!-- ABOUT -->
+                <a href="#">
 
-        <section id="about">
+                    <i class="fa-solid fa-graduation-cap"></i>
 
-            <h1>About Me</h1>
+                    Google Scholar
 
-            <h2>Welcome</h2>
+                </a>
 
-            <p>
+                <a href="#">
 
-                I am <strong>Mohosina Akhter</strong>,
-                a Machine Learning student and researcher
-                based in Finland.
+                    <i class="fa-brands fa-orcid"></i>
 
-            </p>
+                    ORCID
 
-            <p>
-                My research interests include:
-            </p>
+                </a>
 
-            <ul>
+                <a href="https://github.com/mohosina-lab">
 
-                <li>Machine Learning</li>
+                    <i class="fa-brands fa-github"></i>
 
-                <li>Healthcare AI</li>
+                    GitHub
 
-                <li>Predictive Modelling</li>
+                </a>
 
-                <li>Medical Data Science</li>
+                <a href="#">
 
-                <li>Chronic Pain Research</li>
+                    <i class="fa-brands fa-linkedin"></i>
 
-            </ul>
+                    LinkedIn
 
-            <p>
-
-                Currently I am developing machine learning models
-                for patient selection in Spinal Cord Stimulation
-                treatment.
-
-            </p>
-
-        </section>
-
-        <!-- PROJECTS -->
-
-        <section id="projects">
-
-            <h1>Projects</h1>
-
-            <div class="card-grid">
-
-                <div class="card">
-
-                    <h3>Healthcare AI</h3>
-
-                    <p>
-
-                        Machine learning models for patient outcome
-                        prediction.
-
-                    </p>
-
-                    <div class="tags">
-
-                        <span>Python</span>
-
-                        <span>PyTorch</span>
-
-                        <span>XGBoost</span>
-
-                    </div>
-
-                    <div class="buttons">
-
-                        <a href="#">GitHub</a>
-
-                        <a href="#">Demo</a>
-
-                    </div>
-
-                </div>
-
-                <div class="card">
-
-                    <h3>Medical Data Science</h3>
-
-                    <p>
-
-                        Predictive modelling using clinical datasets.
-
-                    </p>
-
-                    <div class="tags">
-
-                        <span>R</span>
-
-                        <span>SQL</span>
-
-                        <span>ML</span>
-
-                    </div>
-
-                    <div class="buttons">
-
-                        <a href="#">GitHub</a>
-
-                    </div>
-
-                </div>
+                </a>
 
             </div>
 
-        </section>
+        </aside>
 
-        <!-- PUBLICATIONS -->
 
-        <section id="publications">
 
-            <h1>Publications</h1>
+        <!-- ==========================
+                MAIN CONTENT
+        =========================== -->
 
-            <div class="publication">
+        <main>
 
-                <h3>
+            <!-- ABOUT -->
 
-                    Deep Learning for Healthcare Prediction
+            <section id="about">
 
-                </h3>
+                <span class="section-tag">
+
+                    ABOUT
+
+                </span>
+
+                <h1>
+
+                    Welcome 👋
+
+                </h1>
 
                 <p>
 
-                    Artificial Intelligence in Medicine
-
-                    • 2025
+                    I am <strong>Mohosina Akhter</strong>, a Machine Learning
+                    student and researcher based in Finland. My work focuses on
+                    developing predictive models for healthcare using modern
+                    machine learning and medical data science techniques.
 
                 </p>
 
-                <div class="buttons">
+                <div class="chips">
 
-                    <a href="#">Paper</a>
+                    <span>Machine Learning</span>
 
-                    <a href="#">Code</a>
+                    <span>Healthcare AI</span>
 
-                    <a href="#">BibTeX</a>
+                    <span>Medical Data Science</span>
+
+                    <span>Predictive Modelling</span>
+
+                    <span>Chronic Pain</span>
 
                 </div>
 
-            </div>
+            </section>
 
-            <div class="publication">
 
-                <h3>
 
-                    Predictive Models for Chronic Pain
+            <!-- RESEARCH -->
 
-                </h3>
+            <section id="research">
+
+                <span class="section-tag">
+
+                    RESEARCH
+
+                </span>
+
+                <h2>
+
+                    Current Research
+
+                </h2>
+
+                <div class="feature-card">
+
+                    <h3>
+
+                        Patient Selection using Machine Learning
+
+                    </h3>
+
+                    <p>
+
+                        Developing predictive machine learning models for
+                        identifying suitable candidates for Spinal Cord
+                        Stimulation treatment.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PROJECTS -->
+
+            <section id="projects">
+
+                <span class="section-tag">
+
+                    PROJECTS
+
+                </span>
+
+                <h2>
+
+                    Selected Projects
+
+                </h2>
+
+                <div class="grid">
+
+                    <article class="card">
+
+                        <h3>
+
+                            Healthcare AI
+
+                        </h3>
+
+                        <p>
+
+                            Predictive machine learning models for
+                            clinical decision support.
+
+                        </p>
+
+                        <div class="tech">
+
+                            <span>Python</span>
+
+                            <span>PyTorch</span>
+
+                            <span>XGBoost</span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="card">
+
+                        <h3>
+
+                            Medical Data Science
+
+                        </h3>
+
+                        <p>
+
+                            Statistical analysis and predictive modelling
+                            using real-world clinical datasets.
+
+                        </p>
+
+                        <div class="tech">
+
+                            <span>R</span>
+
+                            <span>SQL</span>
+
+                            <span>ML</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PUBLICATIONS -->
+
+            <section id="publications">
+
+                <span class="section-tag">
+
+                    PUBLICATIONS
+
+                </span>
+
+                <h2>
+
+                    Recent Publications
+
+                </h2>
+
+                <div class="publication-card">
+
+                    <div>
+
+                        <h3>
+
+                            Deep Learning for Healthcare Prediction
+
+                        </h3>
+
+                        <p>
+
+                            Artificial Intelligence in Medicine · 2025
+
+                        </p>
+
+                    </div>
+
+                    <a href="#">
+
+                        Read →
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-card">
+
+                    <div>
+
+                        <h3>
+
+                            Predictive Models for Chronic Pain
+
+                        </h3>
+
+                        <p>
+
+                            Journal of Medical AI · 2024
+
+                        </p>
+
+                    </div>
+
+                    <a href="#">
+
+                        Read →
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CONTACT -->
+
+            <section id="contact">
+
+                <span class="section-tag">
+
+                    CONTACT
+
+                </span>
+
+                <h2>
+
+                    Let's Connect
+
+                </h2>
 
                 <p>
 
-                    Journal of Medical AI
-
-                    • 2024
+                    I'm always interested in collaborations, healthcare AI,
+                    and interdisciplinary research.
 
                 </p>
 
-                <div class="buttons">
+                <a href="mailto:your@email.com" class="contact-btn">
 
-                    <a href="#">Paper</a>
+                    Send Email
 
-                    <a href="#">Code</a>
+                </a>
 
-                </div>
+            </section>
 
-            </div>
+        </main>
 
-        </section>
+    </div>
 
-        <!-- CONTACT -->
 
-        <section id="contact">
 
-            <h1>Contact</h1>
+    <footer>
 
-            <p>
+        © 2026 Mohosina Akhter • Built with HTML, CSS & JavaScript
 
-                📍 Finland
+    </footer>
 
-            </p>
-
-            <p>
-
-                📧 your@email.com
-
-            </p>
-
-            <p>
-
-                Feel free to contact me regarding
-                collaborations, research opportunities,
-                or academic discussions.
-
-            </p>
-
-        </section>
-
-    </main>
-
-</div>
-
-<footer>
-
-    © 2026 Mohosina Akhter
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
