@@ -1,330 +1,630 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =====================================
+   RESET
+===================================== */
 
-    <title>Mohosina Akhter</title>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+html{
+    scroll-behavior:smooth;
+}
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+:root{
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    --bg:#ffffff;
+    --card:#ffffff;
+    --text:#222;
+    --text-light:#666;
+    --border:#e5e7eb;
 
-<body>
+    --primary:#2563eb;
+    --hover:#1d4ed8;
 
-<header class="navbar">
+    --shadow:0 5px 20px rgba(0,0,0,.08);
 
-    <div class="logo">
-        Mohosina Akhter
-    </div>
+}
 
-    <nav id="nav-links">
+body.dark{
 
-        <a href="#about">About</a>
+    --bg:#111827;
+    --card:#1f2937;
+    --text:#f3f4f6;
+    --text-light:#d1d5db;
+    --border:#374151;
+    --shadow:none;
 
-        <a href="#projects">Projects</a>
+}
 
-        <a href="#publications">Publications</a>
+body{
 
-        <a href="#contact">Contact</a>
+    font-family:"Inter",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
 
-        <a href="CV.pdf" target="_blank">CV</a>
+}
 
-        <button id="theme-toggle">
-            <i class="fa-solid fa-moon"></i>
-        </button>
+/* =====================================
+   NAVBAR
+===================================== */
 
-    </nav>
+.navbar{
 
-    <button class="menu-btn" id="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-    </button>
+    position:sticky;
+    top:0;
 
-</header>
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-<div class="wrapper">
+    padding:20px 60px;
 
-    <!-- LEFT SIDEBAR -->
+    background:var(--bg);
 
-    <aside class="sidebar">
+    border-bottom:1px solid var(--border);
 
-        <img src="profile.png" class="profile-image">
+    z-index:1000;
 
-        <h2>Mohosina Akhter</h2>
+}
 
-        <p class="subtitle">
-            Machine Learning Student<br>
-            & Researcher
-        </p>
+.logo{
 
-        <div class="info">
+    font-size:2rem;
+    font-weight:700;
 
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Finland
-            </p>
+}
 
-            <p>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:your@email.com">Email</a>
-            </p>
+nav{
 
-            <p>
-                <i class="fa-brands fa-google-scholar"></i>
-                <a href="#">Google Scholar</a>
-            </p>
+    display:flex;
+    align-items:center;
+    gap:35px;
 
-            <p>
-                <i class="fa-brands fa-orcid"></i>
-                <a href="#">ORCID</a>
-            </p>
+}
 
-            <p>
-                <i class="fa-brands fa-github"></i>
-                <a href="https://github.com/mohosina-lab">
-                    GitHub
-                </a>
-            </p>
+nav a{
 
-            <p>
-                <i class="fa-brands fa-linkedin"></i>
-                <a href="#">
-                    LinkedIn
-                </a>
-            </p>
+    color:var(--text);
+    text-decoration:none;
+    font-weight:500;
 
-        </div>
+    transition:.3s;
 
-    </aside>
+}
 
-    <!-- MAIN CONTENT -->
+nav a:hover{
 
-    <main>
+    color:var(--primary);
 
-        <!-- ABOUT -->
+}
 
-        <section id="about">
+#theme-toggle{
 
-            <h1>About Me</h1>
+    background:none;
+    border:none;
+    cursor:pointer;
 
-            <h2>Welcome</h2>
+    font-size:20px;
+    color:var(--text);
 
-            <p>
+}
 
-                I am <strong>Mohosina Akhter</strong>,
-                a Machine Learning student and researcher
-                based in Finland.
+.menu-btn{
 
-            </p>
+    display:none;
 
-            <p>
-                My research interests include:
-            </p>
+    border:none;
+    background:none;
 
-            <ul>
+    font-size:25px;
+    cursor:pointer;
 
-                <li>Machine Learning</li>
+    color:var(--text);
 
-                <li>Healthcare AI</li>
+}
 
-                <li>Predictive Modelling</li>
+/* =====================================
+   LAYOUT
+===================================== */
 
-                <li>Medical Data Science</li>
+.wrapper{
 
-                <li>Chronic Pain Research</li>
+    display:grid;
 
-            </ul>
+    grid-template-columns:300px 1fr;
 
-            <p>
+    max-width:1400px;
 
-                Currently I am developing machine learning models
-                for patient selection in Spinal Cord Stimulation
-                treatment.
+    margin:auto;
 
-            </p>
+    gap:80px;
 
-        </section>
+    padding:60px;
 
-        <!-- PROJECTS -->
+}
 
-        <section id="projects">
+/* =====================================
+   SIDEBAR
+===================================== */
 
-            <h1>Projects</h1>
+.sidebar{
 
-            <div class="card-grid">
+    position:sticky;
 
-                <div class="card">
+    top:120px;
 
-                    <h3>Healthcare AI</h3>
+    height:fit-content;
 
-                    <p>
+}
 
-                        Machine learning models for patient outcome
-                        prediction.
+.profile-image{
 
-                    </p>
+    width:220px;
+    height:220px;
 
-                    <div class="tags">
+    object-fit:cover;
 
-                        <span>Python</span>
+    border-radius:50%;
 
-                        <span>PyTorch</span>
+    margin-bottom:25px;
 
-                        <span>XGBoost</span>
+    border:5px solid white;
 
-                    </div>
+    box-shadow:var(--shadow);
 
-                    <div class="buttons">
+}
 
-                        <a href="#">GitHub</a>
+.sidebar h2{
 
-                        <a href="#">Demo</a>
+    font-size:2rem;
+    margin-bottom:10px;
 
-                    </div>
+}
 
-                </div>
+.subtitle{
 
-                <div class="card">
+    color:var(--text-light);
 
-                    <h3>Medical Data Science</h3>
+    line-height:1.8;
 
-                    <p>
+    margin-bottom:30px;
 
-                        Predictive modelling using clinical datasets.
+}
 
-                    </p>
+.info p{
 
-                    <div class="tags">
+    margin-bottom:18px;
 
-                        <span>R</span>
+    display:flex;
 
-                        <span>SQL</span>
+    align-items:center;
 
-                        <span>ML</span>
+    gap:12px;
 
-                    </div>
+}
 
-                    <div class="buttons">
+.info a{
 
-                        <a href="#">GitHub</a>
+    color:var(--text);
 
-                    </div>
+    text-decoration:none;
 
-                </div>
+}
 
-            </div>
+.info a:hover{
 
-        </section>
+    color:var(--primary);
 
-        <!-- PUBLICATIONS -->
+}
 
-        <section id="publications">
+/* =====================================
+   MAIN
+===================================== */
 
-            <h1>Publications</h1>
+main section{
 
-            <div class="publication">
+    margin-bottom:90px;
 
-                <h3>
+}
 
-                    Deep Learning for Healthcare Prediction
+main h1{
 
-                </h3>
+    font-size:3rem;
 
-                <p>
+    margin-bottom:25px;
 
-                    Artificial Intelligence in Medicine
+}
 
-                    • 2025
+main h2{
 
-                </p>
+    font-size:2.2rem;
 
-                <div class="buttons">
+    margin-bottom:30px;
 
-                    <a href="#">Paper</a>
+}
 
-                    <a href="#">Code</a>
+main p{
 
-                    <a href="#">BibTeX</a>
+    font-size:1.15rem;
 
-                </div>
+    line-height:1.9;
 
-            </div>
+    margin-bottom:25px;
 
-            <div class="publication">
+    color:var(--text-light);
 
-                <h3>
+}
 
-                    Predictive Models for Chronic Pain
+main strong{
 
-                </h3>
+    color:var(--text);
 
-                <p>
+}
 
-                    Journal of Medical AI
+ul{
 
-                    • 2024
+    margin-left:30px;
 
-                </p>
+    margin-bottom:30px;
 
-                <div class="buttons">
+}
 
-                    <a href="#">Paper</a>
+li{
 
-                    <a href="#">Code</a>
+    margin-bottom:14px;
 
-                </div>
+    font-size:1.1rem;
 
-            </div>
+}
 
-        </section>
+/* =====================================
+   PROJECTS
+===================================== */
 
-        <!-- CONTACT -->
+.card-grid{
 
-        <section id="contact">
+    display:grid;
 
-            <h1>Contact</h1>
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-            <p>
+    gap:30px;
 
-                📍 Finland
+}
 
-            </p>
+.card{
 
-            <p>
+    background:var(--card);
 
-                📧 your@email.com
+    border:1px solid var(--border);
 
-            </p>
+    border-radius:15px;
 
-            <p>
+    padding:30px;
 
-                Feel free to contact me regarding
-                collaborations, research opportunities,
-                or academic discussions.
+    box-shadow:var(--shadow);
 
-            </p>
+    transition:.3s;
 
-        </section>
+}
 
-    </main>
+.card:hover{
 
-</div>
+    transform:translateY(-6px);
 
-<footer>
+}
 
-    © 2026 Mohosina Akhter
+.card h3{
 
-</footer>
+    margin-bottom:15px;
 
-<script src="script.js"></script>
+}
 
-</body>
-</html>
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin:20px 0;
+
+}
+
+.tags span{
+
+    padding:6px 14px;
+
+    background:#eef2ff;
+
+    border-radius:30px;
+
+    color:#1e40af;
+
+    font-size:.9rem;
+
+}
+
+body.dark .tags span{
+
+    background:#374151;
+
+    color:#fff;
+
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.buttons a{
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    background:var(--primary);
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+.buttons a:hover{
+
+    background:var(--hover);
+
+}
+
+/* =====================================
+   PUBLICATIONS
+===================================== */
+
+.publication{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-left:5px solid var(--primary);
+
+    padding:30px;
+
+    border-radius:12px;
+
+    margin-bottom:30px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.publication h3{
+
+    margin-bottom:10px;
+
+}
+
+.publication p{
+
+    margin-bottom:15px;
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    border-top:1px solid var(--border);
+
+    color:var(--text-light);
+
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media(max-width:1000px){
+
+.wrapper{
+
+    grid-template-columns:1fr;
+
+    gap:50px;
+
+    padding:40px;
+
+}
+
+.sidebar{
+
+    position:relative;
+
+    top:0;
+
+    text-align:center;
+
+}
+
+.profile-image{
+
+    width:180px;
+    height:180px;
+
+}
+
+.info p{
+
+    justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    padding:18px 25px;
+
+}
+
+.logo{
+
+    font-size:1.6rem;
+
+}
+
+nav{
+
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:var(--bg);
+
+    display:none;
+
+    flex-direction:column;
+
+    padding:25px;
+
+    border-top:1px solid var(--border);
+
+}
+
+nav.active{
+
+    display:flex;
+
+}
+
+.menu-btn{
+
+    display:block;
+
+}
+
+.wrapper{
+
+    padding:25px;
+
+}
+
+main h1{
+
+    font-size:2.3rem;
+
+}
+
+main h2{
+
+    font-size:1.8rem;
+
+}
+
+.card-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.buttons{
+
+    flex-wrap:wrap;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.profile-image{
+
+    width:150px;
+    height:150px;
+
+}
+
+main h1{
+
+    font-size:2rem;
+
+}
+
+main h2{
+
+    font-size:1.5rem;
+
+}
+
+main p{
+
+    font-size:1rem;
+
+}
+
+.sidebar h2{
+
+    font-size:1.7rem;
+
+}
+
+}
+/* Active navigation link */
+
+nav a.active-link{
+    color: var(--primary);
+    font-weight: 600;
+    position: relative;
+}
+
+nav a.active-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background:var(--primary);
+    border-radius:2px;
+}
+
+/* Fade-in animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(30px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
