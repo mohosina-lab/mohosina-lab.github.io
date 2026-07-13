@@ -1,256 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Curriculum Vitae | Mohosina Akhter</title>
 
-<title>Curriculum Vitae | Mohosina Akhter</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- ================= NAVBAR ================= -->
+
 <header class="navbar">
 
-<div class="logo">
-Mohosina Akhter
-</div>
+    <a href="index.html" class="logo">
+        Mohosina Akhter
+    </a>
 
-<nav>
+    <nav id="navMenu">
 
-<a href="index.html">Home</a>
-<a href="projects.html">Projects</a>
-<a href="publication.html">Publications</a>
+        <a href="index.html#about">About</a>
 
-</nav>
+        <a href="index.html#research">Research</a>
+
+        <a href="index.html#projects">Projects</a>
+
+        <a href="index.html#publications">Publications</a>
+
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="themeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
 
 </header>
 
+<!-- ================= HERO ================= -->
 
-<section class="page-header">
+<section class="cv-hero">
 
-<h1>Curriculum Vitae</h1>
+    <div class="container">
+
+        <span class="section-tag">
+            Curriculum Vitae
+        </span>
+
+        <h1>
+            Curriculum Vitae
+        </h1>
+
+        <p>
+            A summary of my academic background, research experience,
+            professional career, and technical expertise.
+        </p>
+
+        <div class="cv-buttons">
+
+            <a href="files/Mohosina_Akhter_CV.pdf"
+               class="primary-btn"
+               target="_blank">
+
+                <i class="fas fa-download"></i>
+
+                Download PDF
+
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/"
+               target="_blank"
+               class="secondary-btn">
+
+                <i class="fab fa-linkedin"></i>
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="cv-content">
+
+<div class="container">
+
+<!-- Summary -->
+
+<div class="cv-card">
+
+<h2>
+Professional Summary
+</h2>
 
 <p>
 
-A summary of my academic background, research experience, professional work, and technical expertise.
+I am a researcher and digital health professional with more than ten years of
+experience in healthcare technology, digital health implementation, and health
+information systems. My current research focuses on machine learning for
+clinical decision support, particularly evaluating classical machine learning
+models for patient selection in spinal cord stimulation. I am interested in
+healthcare AI, trustworthy AI, predictive modelling, and responsible
+applications of artificial intelligence in medicine.
 
 </p>
-
-<div class="cv-buttons">
-
-<a href="YOUR_LINKEDIN" class="btn-outline">
-LinkedIn
-</a>
-
-<a href="CV.pdf" class="btn-primary" target="_blank">
-Download PDF
-</a>
 
 </div>
 
-</section>
+<!-- Education -->
 
-
-<div class="cv-grid">
-
-<div class="cv-main">
-
-<section class="cv-card">
-
-<h2>Professional Summary</h2>
-
-<p>
-
-I am a researcher and digital health professional with over ten years of experience in healthcare technology, digital health implementation, and health information systems. My current research focuses on machine learning for clinical decision support, with interests in healthcare AI, trustworthy AI, and responsible AI.
-
-</p>
-
-</section>
-
-
-<section class="cv-card">
+<div class="cv-card">
 
 <h2>Education</h2>
 
-<div class="timeline-item">
+<div class="cv-item">
 
-<h3>University of Oulu</h3>
+<h3>
+Master of Science (Machine Learning, Data Science and AI)
+</h3>
 
 <p>
 
-M.Sc. Biomedical Engineering
+University of Eastern Finland
+
+</p>
+
+<span>
+2023 – Present
+</span>
+
+</div>
+
+<div class="cv-item">
+
+<h3>
+Master of Public Health
+</h3>
+
+<p>
+North South University
+</p>
+
+</div>
+
+<div class="cv-item">
+
+<h3>
+Bachelor of Dental Surgery
+</h3>
+
+<p>
+University of Dhaka
+</p>
+
+</div>
+
+</div>
+
+<!-- Research -->
+
+<div class="cv-card">
+
+<h2>
+Research Interests
+</h2>
+
+<div class="skills-grid">
+
+<span>Machine Learning</span>
+
+<span>Healthcare AI</span>
+
+<span>Clinical Decision Support</span>
+
+<span>Medical Data Science</span>
+
+<span>Predictive Modelling</span>
+
+<span>Trustworthy AI</span>
+
+<span>Responsible AI</span>
+
+<span>Digital Health</span>
+
+</div>
+
+</div>
+
+<!-- Skills -->
+
+<div class="cv-card">
+
+<h2>
+Technical Skills
+</h2>
+
+<div class="skills-grid">
+
+<span>Python</span>
+
+<span>Scikit-Learn</span>
+
+<span>Pandas</span>
+
+<span>NumPy</span>
+
+<span>Matplotlib</span>
+
+<span>SQL</span>
+
+<span>R</span>
+
+<span>Git</span>
+
+<span>GitHub</span>
+
+<span>Jupyter Notebook</span>
+
+<span>LaTeX</span>
+
+<span>Microsoft Azure</span>
+
+</div>
+
+</div>
+
+<!-- Experience -->
+
+<div class="cv-card">
+
+<h2>
+
+Professional Experience
+
+</h2>
+
+<p>
+
+More than ten years of professional experience in healthcare,
+digital health implementation, health informatics, programme
+management, and international development before transitioning
+into academic research in artificial intelligence and healthcare.
 
 </p>
 
 </div>
 
-<div class="timeline-item">
+<!-- Publications -->
 
-<h3>University of Dhaka</h3>
+<div class="cv-card">
+
+<h2>
+
+Publications
+
+</h2>
 
 <p>
 
-M.Sc. Information Technology
+Please visit the
+<strong>Publications</strong>
+section on the homepage for my latest journal articles,
+conference papers, and preprints.
 
 </p>
+
+<a href="index.html#publications" class="text-link">
+
+View Publications →
+
+</a>
 
 </div>
-
-<div class="timeline-item">
-
-<h3>University of Dhaka</h3>
-
-<p>
-
-B.Sc. Computer Science
-
-</p>
 
 </div>
 
 </section>
 
+<!-- Footer -->
 
-<section class="cv-card">
+<footer class="footer">
 
-<h2>Research Experience</h2>
-
-<h3>Research Assistant</h3>
-
-<p>
-
-Software Engineering and Information Systems Research Unit
-
-<br>
-
-University of Oulu
-
-</p>
+<div class="container">
 
 <p>
 
-Evaluated the predictive performance and robustness of classical machine learning models for patient selection in Spinal Cord Stimulation (SCS). The research investigates model reliability under controlled experimental conditions including missing data and label uncertainty.
-
-</p>
-
-</section>
-
-
-<section class="cv-card">
-
-<h2>Professional Experience</h2>
-
-<p>
-
-Summarize your major positions from your CV here.
-
-</p>
-
-</section>
-
-
-<section class="cv-card">
-
-<h2>Publications</h2>
-
-<p>
-
-List your publications with DOI links.
-
-</p>
-
-</section>
-
-</div>
-
-
-<div class="cv-sidebar">
-
-<div class="sidebar-card">
-
-<h3>Research Interests</h3>
-
-<ul>
-
-<li>Machine Learning</li>
-
-<li>Healthcare AI</li>
-
-<li>Clinical Decision Support</li>
-
-<li>Responsible AI</li>
-
-<li>Digital Health</li>
-
-</ul>
-
-</div>
-
-
-<div class="sidebar-card">
-
-<h3>Technical Skills</h3>
-
-<p>
-
-Python
-
-<br>
-
-R
-
-<br>
-
-SQL
-
-<br>
-
-TensorFlow
-
-<br>
-
-Scikit-learn
-
-<br>
-
-Power BI
-
-<br>
-
-Healthcare Data Analysis
+© 2025 Mohosina Akhter
 
 </p>
 
 </div>
 
+</footer>
 
-<div class="sidebar-card">
-
-<h3>Languages</h3>
-
-<p>
-
-English
-
-<br>
-
-Bengali
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+<script src="script.js"></script>
 
 </body>
 
