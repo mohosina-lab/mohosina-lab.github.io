@@ -1,289 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Curriculum Vitae | Mohosina Akhter</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+    <!-- ========================= -->
+    <!-- Navigation -->
+    <!-- ========================= -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <a href="index.html" class="logo">
-        Mohosina Akhter
-    </a>
+        <a href="index.html" class="logo">
+            Mohosina Akhter
+        </a>
 
-    <nav id="navMenu">
+        <nav>
 
-        <a href="index.html#about">About</a>
+            <a href="index.html">Home</a>
 
-        <a href="index.html#research">Research</a>
+            <a href="projects.html">Projects</a>
 
-        <a href="index.html#projects">Projects</a>
+            <a href="publication.html">Publications</a>
 
-        <a href="index.html#publications">Publications</a>
+        </nav>
 
-        <a href="index.html#contact">Contact</a>
+    </header>
 
-    </nav>
 
-    <div class="nav-actions">
+    <!-- ========================= -->
+    <!-- Hero -->
+    <!-- ========================= -->
 
-        <button id="themeToggle">
-            <i class="fas fa-moon"></i>
-        </button>
+    <section class="cv-hero">
 
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
-
-    </div>
-
-</header>
-
-<!-- ================= HERO ================= -->
-
-<section class="cv-hero">
-
-    <div class="container">
-
-        <span class="section-tag">
-            Curriculum Vitae
-        </span>
-
-        <h1>
-            Curriculum Vitae
-        </h1>
+        <h1>Curriculum Vitae</h1>
 
         <p>
+
             A summary of my academic background, research experience,
             professional career, and technical expertise.
+
         </p>
 
-        <div class="cv-buttons">
+    </section>
 
-            <a href="files/CV_Mohosina_Akhter.pdf"
-               class="primary-btn"
-               target="_blank">
 
-                <i class="fas fa-download"></i>
+    <!-- ========================= -->
+    <!-- CV Buttons -->
+    <!-- ========================= -->
 
-                Download PDF
+    <section class="cv-buttons">
 
-            </a>
+        <div class="cv-card">
 
-            <a href="https://www.linkedin.com/in/m-akhter/"
-               target="_blank"
-               class="secondary-btn">
+            <div class="cv-icon">
 
-                <i class="fab fa-linkedin"></i>
+                <i class="fa-solid fa-graduation-cap"></i>
 
-                LinkedIn
+            </div>
+
+            <h2>Academic CV</h2>
+
+            <p>
+
+                Research experience, publications,
+                education, academic projects,
+                conferences and teaching.
+
+            </p>
+
+            <a href="files/Academic_CV.pdf"
+                target="_blank"
+                class="cv-download">
+
+                Download Academic CV
 
             </a>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="cv-card">
 
-<!-- ================= CONTENT ================= -->
+            <div class="cv-icon">
 
-<section class="cv-content">
+                <i class="fa-solid fa-briefcase"></i>
 
-<div class="container">
+            </div>
 
-<!-- Summary -->
+            <h2>Professional CV</h2>
 
-<div class="cv-card">
+            <p>
 
-<h2>
-Professional Summary
-</h2>
+                Professional experience,
+                digital health leadership,
+                project management,
+                and technical expertise.
 
-<p>
+            </p>
 
-I am a researcher and digital health professional with more than ten years of
-experience in healthcare technology, digital health implementation, and health
-information systems. My current research focuses on machine learning for
-clinical decision support, particularly evaluating classical machine learning
-models for patient selection in spinal cord stimulation. I am interested in
-healthcare AI, trustworthy AI, predictive modelling, and responsible
-applications of artificial intelligence in medicine.
+            <a href="files/Professional_CV.pdf"
+                target="_blank"
+                class="cv-download">
 
-</p>
+                Download Professional CV
 
-</div>
+            </a>
 
-<!-- Education -->
+        </div>
 
-<div class="cv-card">
+    </section>
 
-<h2>Education</h2>
+        <!-- =========================
+             Education
+        ========================== -->
+        <section class="cv-section">
 
-<div class="cv-item">
+            <h2>Education</h2>
 
-<h3>
-Master of Science (Technology), Master's Programme in Biomedical Engineering
-</h3>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <h3>Master of Science (Technology)</h3>
+                    <span>2023 – Present</span>
+                </div>
 
-<p>
+                <h4>Master's Programme in Biomedical Engineering</h4>
+                <p>University of Oulu, Finland</p>
 
-University of Oulu
+                <p>
+                    Research focus on machine learning for clinical decision support
+                    in spinal cord stimulation (SCS), predictive modelling,
+                    healthcare AI, and trustworthy artificial intelligence.
+                </p>
+            </div>
 
-</p>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <h3>Master of Information Technology</h3>
+                    <span>Completed</span>
+                </div>
 
-</div>
+                <h4>Jahangirnagar University</h4>
 
-<div class="cv-item">
+                <p>
+                    Specialized in information systems, software engineering,
+                    databases, and digital technologies.
+                </p>
+            </div>
 
-<h3>
-Master of Information Technology
-</h3>
+            <div class="cv-item">
+                <div class="cv-item-header">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <span>Completed</span>
+                </div>
 
-<p>
-Jahangirnagar University
-</p>
+                <h4>National University</h4>
 
-</div>
+                <p>
+                    Built a strong foundation in programming,
+                    algorithms, computer systems, and software development.
+                </p>
+            </div>
 
-<div class="cv-item">
+        </section>
 
-<h3>
-Bachelor of Science in Computer Science
-</h3>
 
-<p>
-National University 
-</p>
 
-</div>
 
-</div>
 
-<!-- Skills -->
+        <!-- =========================
+             Professional Experience
+        ========================== -->
+        <section class="cv-section">
 
-<div class="cv-card">
+            <h2>Professional Experience</h2>
 
-<h2>
-Technical Skills
-</h2>
+            <div class="cv-item">
 
-<div class="skills-grid">
+                <div class="cv-item-header">
+                    <h3>Research Assistant</h3>
+                    <span>2024 – Present</span>
+                </div>
 
-<span>Python</span>
+                <h4>University of Oulu</h4>
 
-<span>Scikit-Learn</span>
+                <p>
+                    Conducting research on predictive performance evaluation of
+                    classical machine learning models for patient selection in
+                    spinal cord stimulation. Working with clinical datasets,
+                    statistical evaluation, and experimental robustness analysis.
+                </p>
 
-<span>Pandas</span>
+            </div>
 
-<span>NumPy</span>
+            <div class="cv-item">
 
-<span>Matplotlib</span>
+                <div class="cv-item-header">
+                    <h3>Senior Software & Digital Health Professional</h3>
+                    <span>2012 – 2023</span>
+                </div>
 
-<span>SQL</span>
+                <h4>Healthcare & Digital Health Sector</h4>
 
-<span>R</span>
+                <p>
+                    Over ten years of professional experience delivering
+                    large-scale digital health solutions, health information
+                    systems, interoperability initiatives, software engineering,
+                    and technology implementation across healthcare organizations.
+                </p>
 
-<span>Git</span>
+            </div>
 
-<span>GitHub</span>
-
-<span>Jupyter Notebook</span>
-
-<span>LaTeX</span>
-
-<span>Microsoft Azure</span>
-
-</div>
-
-</div>
-
-<!-- Experience -->
-
-<div class="cv-card">
-
-<h2>
-
-Professional Experience
-
-</h2>
-
-<p>
-
-More than ten years of professional experience in healthcare,
-digital health implementation, health informatics, programme
-management, and international development before transitioning
-into academic research in artificial intelligence and healthcare.
-
-</p>
-
-</div>
-
-<!-- Publications -->
-
-<div class="cv-card">
-
-<h2>
-
-Publications
-
-</h2>
-
-<p>
-
-Please visit the
-<strong>Publications</strong>
-section on the homepage for my latest journal articles,
-conference papers, and preprints.
-
-</p>
-
-<a href="index.html#publications" class="text-link">
-
-View Publications →
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Footer -->
-
-<footer class="footer">
-
-<div class="container">
-
-<p>
-
-© 2025 Mohosina Akhter
-
-</p>
-
-</div>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+        </section>
