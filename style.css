@@ -1728,6 +1728,167 @@ button:focus{
 
 }
 
+/* ==========================
+   CV PAGE
+========================== */
+
+.cv-page{
+    max-width:850px;
+    margin:80px auto;
+    padding:0 30px;
+}
+
+.cv-intro{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.cv-intro h1{
+    font-size:3.5rem;
+    margin-bottom:20px;
+}
+
+.cv-intro p{
+    max-width:700px;
+    margin:auto;
+    font-size:1.15rem;
+    color:#666;
+    line-height:1.8;
+}
+
+.cv-links{
+    margin-top:45px;
+
+    display:flex;
+    justify-content:center;
+    gap:60px;
+
+    flex-wrap:wrap;
+}
+
+.cv-links a{
+
+    text-decoration:none;
+
+    font-size:1.2rem;
+
+    font-weight:600;
+
+    color:#111;
+
+    border-bottom:2px solid #111;
+
+    padding-bottom:6px;
+
+    transition:.3s;
+}
+
+.cv-links a:hover{
+
+    color:#0095ff;
+
+    border-color:#0095ff;
+
+}
+
+.education{
+
+    margin-top:80px;
+
+}
+
+.education h2{
+
+    font-size:2.3rem;
+
+    margin-bottom:40px;
+
+}
+
+.edu-item{
+
+    margin-bottom:45px;
+
+}
+
+.edu-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:baseline;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.edu-top h3{
+
+    font-size:1.4rem;
+
+    margin:0;
+
+}
+
+.edu-top span{
+
+    color:#777;
+
+}
+
+.edu-item p{
+
+    margin:10px 0 4px;
+
+    color:#555;
+
+}
+
+.edu-item small{
+
+    color:#888;
+
+    font-size:1rem;
+
+}
+
+@media(max-width:768px){
+
+.cv-page{
+
+padding:0 20px;
+
+margin:50px auto;
+
+}
+
+.cv-intro h1{
+
+font-size:2.5rem;
+
+}
+
+.cv-links{
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.edu-top{
+
+flex-direction:column;
+
+gap:6px;
+
+}
+
+}
+
 /* ==========================================================
    END
 ==========================================================*/
